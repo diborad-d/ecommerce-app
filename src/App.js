@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
@@ -19,8 +18,8 @@ function App() {
         {/* if you didnt usse exact, the router will despaoly the fisr thing that matches 
         the route like / before checking if the route is right all the way which means 
         it will alwasy desplay the home page */}
-        <Route exact path="/" component={ProductList}></Route>
-        <Route path="/product" component={Product}></Route>
+        <Route exact path="/" component={Product}></Route>
+        <Route path="/productList" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/Cart" component={Cart}></Route>
         <Route path="/details" component={Details}></Route>
