@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components";
 export default class Navbar extends Component {
   render() {
     return (
@@ -8,10 +8,19 @@ export default class Navbar extends Component {
         <Link to="/">
           <i class="fas fa-store-alt fa-2x"></i>
         </Link>
-      <ul className="navbar-nav align-items-center">
-        <li className="nav-item" ml-5></li>
-        <Link to="/" className="nav-link"> Products</Link>
-      </ul>
+        <ul className="navbar-nav align-items-center">
+          {/* note: center nav items */}
+          <li className="nav-item "></li>
+          <Link to="/" className="nav-link ml-5">
+            products
+          </Link>
+        </ul>
+        <Link to="/cart" className="ml-auto">
+          {/* note: use MUI or styles components for a more presentable cart button */}
+          <button>
+            <i className="fas fa-cart-plus">My cart</i>
+          </button>
+        </Link>
       </nav>
     );
   }
