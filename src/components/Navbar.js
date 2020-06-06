@@ -17,11 +17,20 @@ export default class Navbar extends Component {
         </ul>
         <Link to="/cart" className="ml-auto">
           {/* note: use MUI or styles components for a more presentable cart button */}
-          <button>
-            <i className="fas fa-cart-plus">My cart</i>
-          </button>
+          <ButtonContainer>
+            <span className="mr-2">
+              <i className="fas fa-cart-plus" />
+            </span>
+            My cart
+          </ButtonContainer>
         </Link>
       </nav>
     );
   }
 }
+const ButtonContainer = styled.button`
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border:0.1rem solid;
+`;
