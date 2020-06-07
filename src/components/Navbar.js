@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
@@ -28,9 +29,3 @@ export default class Navbar extends Component {
     );
   }
 }
-const ButtonContainer = styled.button`
-  text-transform: capitalize;
-  font-size: 1.4rem;
-  background: transparent;
-  border:0.1rem solid;
-`;
