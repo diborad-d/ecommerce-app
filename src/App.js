@@ -15,16 +15,15 @@ function App() {
     <React.Fragment>
       <Navbar />
       <Switch>
-        {/* if you didnt usse exact, the router will despaoly the fisr thing that matches 
+        {/* if you didnt use exact, the router will despaoly the first thing that matches 
         the route like / before checking if the route is right all the way which means 
         it will alwasy desplay the home page */}
-        <Route exact path="/" component={Product}></Route>
+        <Route exact path="/" component={ProductList}></Route>
         <Route path="/productList" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/Cart" component={Cart}></Route>
-        <Route path="/details" component={Details}></Route>
         <Route component={Default}></Route>
-        {/* for default page you need to five it its path because we want to give error for anything 
+        {/* for default page you dont need to give it its path because we want to give error for anything 
         that doenst match our path */}
       </Switch>
     </React.Fragment>
