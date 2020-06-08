@@ -11,7 +11,7 @@ export const ButtonContainer = styled.button`
   margin: 0.2rem 0.5rem 0.2rem 0;
   transition: all 0.5s ease-in-out;
   &:hover {
-    background: var(--lightBlue);
+    background: var(--lightGray);
     color: var(mainBlue);
   }
   &:focus {
