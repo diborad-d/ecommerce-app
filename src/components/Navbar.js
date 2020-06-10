@@ -7,7 +7,7 @@ export default class Navbar extends Component {
     return (
       <NavWrapper className="navbar navbar=example-sm navbar-dark px-sm-5">
         <Link to="/">
-          <i class="fas fa-store-alt fa-2x"></i>
+          <i className="fas fa-store-alt fa-2x"></i>
         </Link>
         <ul className="navbar-nav align-items-center">
           {/* note: center nav items */}

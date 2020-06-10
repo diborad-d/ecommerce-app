@@ -7,7 +7,9 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: []
+    cart: [],
+    modalOpen: true,
+    modalProduct: detailProduct
   };
   componentDidMount() {
     this.setProducts();
@@ -41,7 +43,6 @@ class ProductProvider extends Component {
     product.count = 1;
     const price = product.price;
     product.total = price;
-    
 
     this.setState(
       () => {
@@ -52,9 +53,20 @@ class ProductProvider extends Component {
       }
     );
   };
+  openModal = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modalProduct: product, modalOpen: true };
+    });
+  };
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
   render() {
     return (
-      <ProductContext.Provider value={{ ...this.state, handleDetail: this.handleDetail, addToCart: this.addToCart }}>
+      <ProductContext.Provider value={{ ...this.state, handleDetail: this.handleDetail, addToCart: this.addToCart, openModal: this.openModal, closeModal: this.closeModal }}>
         {/* using Context: since provider is gonna be sitting on top of our component tree,we need to return all the childern that are gonna be in the app*/}
         {/* right now we are gonna return the children that fall under this componet */}
         {this.props.children}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { ProductConsumer, ProductProvider } from "../context";
+import { ProductConsumer } from "../context";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -22,6 +22,7 @@ export default class Product extends Component {
                   disabled={inCart ? true : false}
                   onClick={() => {
                     value.addToCart(id);
+                    value.openModal(id);
                   }}
                 >
                   {inCart ? (

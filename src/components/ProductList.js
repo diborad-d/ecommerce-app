@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
 // import { storeProducts, detailProducts } from "../data";
