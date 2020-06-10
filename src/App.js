@@ -3,11 +3,11 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-// import Product from "./components/Product";
 import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -26,6 +26,8 @@ function App() {
         {/* for default page you dont need to give it its path because we want to give error for anything 
         that doenst match our path */}
       </Switch>
+      {/* since we dont need to route modal, we will keep it outside switch */}
+      <Modal />
     </React.Fragment>
   );
 }
