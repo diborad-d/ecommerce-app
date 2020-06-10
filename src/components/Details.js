@@ -28,7 +28,8 @@ export default class Details extends Component {
                       {price}
                     </strong>
                   </h4>
-                  <p className="text-capitalize font-weight-bold mt-3 mb-0">Product info: {info}</p>
+                  <span><strong>Product Description:</strong> </span>
+                  <div className="text-capitalize font-weight-bold mt-3 mb-0">{info}</div>
                   <div className="">
                     <Link to="/">
                       <ButtonContainer>Back to Products</ButtonContainer>
