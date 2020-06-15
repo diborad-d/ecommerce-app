@@ -4,7 +4,7 @@
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
-  --lightGray:#adcae6;
+  --lightGray: #adcae6;
 }
 body {
   font-family: "Oswald", sans-serif !important;
@@ -24,4 +24,22 @@ body {
 }
 .fas {
   color: black;
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.01rem solid var(--mainDark) !important;
+}
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+
 }

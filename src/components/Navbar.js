@@ -20,7 +20,7 @@ export default class Navbar extends Component {
           {/* note: use MUI or styles components for a more presentable cart button */}
           <ButtonContainer>
             <span className="mr-2">
-              <i className="fas fa-cart-plus" />
+              <i className="fas fa-cart-plus" style={{color: "var(--mainYellow)"}}/>
             </span>
             My cart
           </ButtonContainer>
