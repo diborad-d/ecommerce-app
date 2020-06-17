@@ -7,7 +7,7 @@ export default class Navbar extends Component {
     return (
       <NavWrapper className="navbar navbar=example-sm navbar-dark px-sm-5">
         <Link to="/">
-          <i className="fas fa-store-alt fa-2x"></i>
+          <i className="fas fa-store-alt fa-2x" style={{ color: "var(--mainYellow)" }}></i>
         </Link>
         <ul className="navbar-nav align-items-center">
           {/* note: center nav items */}
@@ -20,7 +20,7 @@ export default class Navbar extends Component {
           {/* note: use MUI or styles components for a more presentable cart button */}
           <ButtonContainer>
             <span className="mr-2">
-              <i className="fas fa-cart-plus" style={{color: "var(--mainYellow)"}}/>
+              <i className="fas fa-cart-plus" style={{ color: "var(--mainYellow)" }} />
             </span>
             My cart
           </ButtonContainer>
