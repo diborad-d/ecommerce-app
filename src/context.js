@@ -52,7 +52,8 @@ class ProductProvider extends Component {
         return { product: tempProduct, cart: [...this.state.cart, product] };
       },
       () => {
-        console.log(this.state);
+        // add items that have been added to cat in this cb fuction
+        this.addTotals();
       }
     );
   };
@@ -74,12 +75,33 @@ class ProductProvider extends Component {
     console.log("decrement");
   };
   removeItem = id => {
-    console.log("remove item");
+    let tempProducts = [...this.state.products];
   };
   clearCart = () => {
-    console.log("cart is clear");
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.addTotals();
+      }
+    );
   };
-
+  addTotals = () => {
+    let subTotal = 0;
+    this.state.cart.map(item => (subTotal += item.total));
+    const tempTax = subTotal * 0.082;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const total = subTotal + tax;
+    this.setState(() => {
+      return {
+        cartSubTotal: subTotal,
+        cartTax: tax,
+        cartTotal: total
+      };
+    });
+  };
   render() {
     return (
       <ProductContext.Provider value={{ ...this.state, handleDetail: this.handleDetail, addToCart: this.addToCart, openModal: this.openModal, closeModal: this.closeModal, increment: this.increment, decrement: this.decrement, removeItem: this.removeItem, clearCart: this.clearCart }}>
