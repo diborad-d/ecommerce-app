@@ -24,4 +24,4 @@
    ### Paypal Express: this module was used to proviede safe and secure payment system for shoppers at checkout: [react-paypal-express-checkout](https://www.npmjs.com/package/react-paypal-express-checkout).
      
 
-## This project is part of [my portfolio] (diboradagne.com)
+* This project is part of [my portfolio](diboradagne.com)
