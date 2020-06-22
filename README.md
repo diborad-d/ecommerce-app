@@ -16,7 +16,7 @@
    ### Git and Github: were an essential part of the project from start to finish while commiting and pusing the project.
      
      
-   ### Netlify: The project was deployed using Netlify [active site](https://ecommerce-phone-store-react.netlify.app/)
+   ### Netlify: The project was deployed using [Netlify](https://ecommerce-phone-store-react.netlify.app/)
      
      
      
